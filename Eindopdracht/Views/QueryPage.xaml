@@ -1,5 +1,37 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Eindopdracht.Views.QueryPage">
     <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <ListView Grid.Row="0" x:Name="lvwRecipes" RowHeight="60">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding ThumbnailUrl}" Aspect="AspectFill" HeightRequest="60" WidthRequest="60" />
+                                <Label Grid.Column="1" Text="{Binding Title}" FontAttributes="Bold" VerticalOptions="Center" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="&lt;" FontSize="28" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Previous" />
+                <Label Grid.Column="1" x:Name="lblPageNumber" Text="1" FontSize="28" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Button Grid.Column="2" Text="&gt;" FontSize="28" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Next" />
+            </Grid>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

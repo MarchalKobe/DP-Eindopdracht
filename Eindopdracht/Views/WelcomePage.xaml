@@ -1,9 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Eindopdracht.Views.WelcomePage" NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-            <Label Text="Welcome to home page"/>
-            <Button Text="Query page" Clicked="Button_Clicked"/>
-        </StackLayout>
+        <Grid Padding="20" HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Text="Welcome!" FontSize="32" VerticalOptions="End" />
+            <StackLayout Grid.Row="1" HorizontalOptions="Center">
+                <Label Text="Seach for a recipe:" HorizontalOptions="Start" />
+                <Entry x:Name="queryString" Placeholder="e.g. omelet" WidthRequest="240" />
+                <Button Text="Search" HorizontalOptions="End" Clicked="Button_Clicked" />
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

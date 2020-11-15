@@ -10,7 +10,8 @@ namespace Eindopdracht.Views {
         }
 
         void Button_Clicked(System.Object sender, System.EventArgs e) {
-            Navigation.PushAsync(new QueryPage());
+            Navigation.PushAsync(new QueryPage(queryString.Text));
         }
+
     }
 }
