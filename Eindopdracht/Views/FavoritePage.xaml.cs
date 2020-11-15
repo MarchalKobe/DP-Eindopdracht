@@ -8,9 +8,5 @@ namespace Eindopdracht.Views {
         public FavoritePage() {
             InitializeComponent();
         }
-
-        void Button_Clicked(System.Object sender, System.EventArgs e) {
-            Navigation.PushAsync(new DetailPage());
-        }
     }
 }

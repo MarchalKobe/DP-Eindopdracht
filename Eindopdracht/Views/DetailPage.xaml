@@ -1,8 +1,35 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Eindopdracht.Views.DetailPage">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-            <Label Text="Welcome to detail page"/>
-        </StackLayout>
+        <Grid Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image x:Name="imgThumbnail" Aspect="AspectFill" HeightRequest="60" WidthRequest="60" />
+                <Label Grid.Column="1" x:Name="lblTitle" FontAttributes="Bold" VerticalOptions="Center" />
+            </Grid>
+            <StackLayout Grid.Row="1" Margin="0,20,0,0">
+                <Label x:Name="lblIngredients" />
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="link" TextColor="Blue" TextDecorations="Underline">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://docs.microsoft.com/xamarin/" />
+                                </Span.GestureRecognizers>
+                            </Span>
+                            <Span Text=" to recipe." />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

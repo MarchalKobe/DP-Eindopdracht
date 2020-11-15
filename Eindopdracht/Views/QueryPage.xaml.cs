@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Eindopdracht.Models;
 using Eindopdracht.Repositories;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Eindopdracht.Views {
@@ -35,6 +37,14 @@ namespace Eindopdracht.Views {
             this.PageNumber++;
             FillList();
             lblPageNumber.Text = Convert.ToString(this.PageNumber);
+        }
+
+        void lvwRecipes_ItemSelected(System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e) {
+            if(lvwRecipes.SelectedItem != null) {
+                Recipe recipeSelected = (Recipe)lvwRecipes.SelectedItem;
+                Navigation.PushAsync(new DetailPage(recipeSelected));
+                lvwRecipes.SelectedItem = null;
+            }
         }
     }
 }
