@@ -133,4 +133,11 @@
       <Name>Eindopdracht</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\home%401x.png" />
+    <BundleResource Include="Resources\home%402x.png" />
+    <BundleResource Include="Resources\home%403x.png" />
+    <BundleResource Include="Resources\favorite%401x.png" />
+    <BundleResource Include="Resources\favorite%402x.png" />
+  </ItemGroup>
 </Project>

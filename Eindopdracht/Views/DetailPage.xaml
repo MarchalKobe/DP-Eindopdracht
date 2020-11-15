@@ -21,8 +21,7 @@
                         <FormattedString>
                             <Span Text="link" TextColor="Blue" TextDecorations="Underline">
                                 <Span.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding TapCommand}"
-                                          CommandParameter="https://docs.microsoft.com/xamarin/" />
+                                    <TapGestureRecognizer Command="{Binding TapCommand}" />
                                 </Span.GestureRecognizers>
                             </Span>
                             <Span Text=" to recipe." />
