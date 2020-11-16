@@ -2,13 +2,13 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Eindopdracht.MainPage" xmlns:view="clr-namespace:Eindopdracht.Views">
     <TabbedPage.Title></TabbedPage.Title>
     <TabbedPage.Children>
-        <NavigationPage Title="Home" IconImageSource="home.png">
+        <NavigationPage Title="Home" IconImageSource="home_icon.png">
             <x:Arguments>
                 <view:WelcomePage />
             </x:Arguments>
         </NavigationPage>
 
-        <NavigationPage Title="Favorites" IconImageSource="favorite.png">
+        <NavigationPage Title="Favorites" IconImageSource="favorite_icon.png">
             <x:Arguments>
                 <view:FavoritePage />
             </x:Arguments>

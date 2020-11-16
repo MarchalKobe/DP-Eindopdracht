@@ -83,23 +83,31 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
-    <AndroidResource Include="Resources\drawable\home%401x.png">
+    <AndroidResource Include="Resources\drawable\home_icon%401x.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\home%402x.png">
+    <AndroidResource Include="Resources\drawable\home_icon%402x.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\home%403x.png">
+    <AndroidResource Include="Resources\drawable\home_icon%403x.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\favorite%401x.png">
+    <AndroidResource Include="Resources\drawable\favorite_icon%401x.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\favorite%402x.png">
+    <AndroidResource Include="Resources\drawable\favorite_icon%402x.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\favorite_border.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\favorite.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
