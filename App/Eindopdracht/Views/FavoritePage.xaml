@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Eindopdracht.Views.FavoritePage" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ListView Grid.Row="0" x:Name="lvwRecipes" RowHeight="60">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding ThumbnailUrl}" Aspect="AspectFill" HeightRequest="60" WidthRequest="60" />
+                            <Label Grid.Column="1" Text="{Binding Title}" FontAttributes="Bold" VerticalOptions="Center" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

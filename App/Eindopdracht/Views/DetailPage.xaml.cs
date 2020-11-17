@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Eindopdracht.Models;
 using Xamarin.Essentials;
@@ -23,5 +25,13 @@ namespace Eindopdracht.Views {
         }
 
         public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(this.DetailRecipe.RecipeUrl));
+
+        void ImageButton_Clicked(System.Object sender, System.EventArgs e) {
+            AddFavorite();
+        }
+
+        private async Task AddFavorite() {
+            
+        }
     }
 }
