@@ -15,7 +15,7 @@
                 <Label Grid.Column="1" x:Name="lblTitle" FontAttributes="Bold" VerticalOptions="Center" />
             </Grid>
             <StackLayout Grid.Row="1">
-                <ImageButton Source="favorite_border.png" HorizontalOptions="Start" WidthRequest="32" Clicked="ImageButton_Clicked" />
+                <ImageButton x:Name="btnFavorite" Source="favorite_border.png" HorizontalOptions="Start" WidthRequest="32" Clicked="ImageButton_Clicked" />
                 <Label x:Name="lblIngredients" />
                 <Label>
                     <Label.FormattedText>
