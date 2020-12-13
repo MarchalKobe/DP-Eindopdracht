@@ -11,7 +11,7 @@ namespace Eindopdracht.Views {
             }
 
             InitializeComponent();
-            webView.Source = url.ToString();
+            webView.Source = url;
         }
     }
 }
