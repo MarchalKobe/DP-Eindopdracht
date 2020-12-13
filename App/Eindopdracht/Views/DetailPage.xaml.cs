@@ -14,6 +14,10 @@ namespace Eindopdracht.Views {
         public Recipe DetailRecipe { get; set; }
 
         public DetailPage(Recipe recipe) {
+            if (Device.RuntimePlatform == Device.Android) {
+                NavigationPage.SetHasNavigationBar(this, false);
+            }
+
             InitializeComponent();
             this.DetailRecipe = recipe;
             ShowDetails();
@@ -33,7 +37,7 @@ namespace Eindopdracht.Views {
             }
         }
 
-        public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(this.DetailRecipe.RecipeUrl));
+        public ICommand TapCommand => new Command<string>((url) => Navigation.PushAsync(new WebPage(this.DetailRecipe.RecipeUrl)));
 
         void ImageButton_Clicked(System.Object sender, System.EventArgs e) {
             AddOrDeleteFavorite();

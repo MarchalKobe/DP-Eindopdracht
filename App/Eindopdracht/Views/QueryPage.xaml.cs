@@ -14,6 +14,10 @@ namespace Eindopdracht.Views {
         public int PageNumber { get; set; }
 
         public QueryPage(string query) {
+            if (Device.RuntimePlatform == Device.Android) {
+                NavigationPage.SetHasNavigationBar(this, false);
+            }
+
             InitializeComponent();
             this.Query = query;
             this.PageNumber = 1;
